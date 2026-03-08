@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="form-header">
+      <div class="badge">🎓 Student Portal</div>
+      <h1>Create Account</h1>
+      <p class="subtitle">Fill in your details to register</p>
+    </div>
+
+    <form id="regForm" novalidate>
+
+      <!-- Name Field -->
+      <div class="field-group">
+        <label for="name">Full Name</label>
+        <div class="input-wrap">
+          <span class="icon">👤</span>
+          <input type="text" id="name" placeholder="Enter your full name" />
+        </div>
+        <span class="error" id="nameError"></span>
+      </div>
+
+      <!-- Email Field -->
+      <div class="field-group">
+        <label for="email">Email Address</label>
+        <div class="input-wrap">
+          <span class="icon">📧</span>
+          <input type="email" id="email" placeholder="you@example.com" />
+        </div>
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <!-- Password Field -->
+      <div class="field-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <span class="icon">🔒</span>
+          <input type="password" id="password" placeholder="Min. 6 characters" />
+          <button type="button" class="toggle-pass" id="togglePass">👁</button>
+        </div>
+        <div class="strength-bar">
+          <div class="strength-fill" id="strengthFill"></div>
+        </div>
+        <span class="error" id="passwordError"></span>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="submitBtn" disabled>
+        Register Now →
+      </button>
+
+      <p class="login-hint">Already have an account? <a href="#">Sign in</a></p>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
